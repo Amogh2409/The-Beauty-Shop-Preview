@@ -1,0 +1,232 @@
+/* Small adaptations for portable email/password access. The storefront theme is unchanged. */
+.auth-form {
+  margin-top: 24px;
+  text-align: left;
+}
+.auth-form fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  display: grid;
+  gap: 18px;
+}
+.auth-form fieldset label {
+  display: grid;
+  gap: 7px;
+}
+.auth-form .form-feedback:empty {
+  display: none;
+}
+button.signout-link {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+}
+.form-grid .draft-length {
+  display: block;
+  margin-top: 8px;
+}
+.copy-fallback {
+  display: block;
+  width: 100%;
+  flex-basis: 100%;
+}
+
+/* Administrator tools are isolated from the customer-facing catalogue layout. */
+.inventory-status {
+  display: grid;
+  gap: 2px;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.inventory-stale {
+  color: #84552b;
+}
+.admin-page {
+  padding-bottom: 48px;
+}
+.admin-nav,
+.admin-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.admin-nav .button {
+  min-width: 0;
+}
+.admin-message {
+  min-height: 24px;
+  margin: 15px 0;
+  overflow-wrap: anywhere;
+}
+.admin-message:not(:empty) {
+  background: var(--soft);
+  padding: 16px;
+  border-left: 3px solid var(--berry);
+}
+.admin-page input,
+.admin-page select {
+  max-width: 100%;
+}
+.admin-page select {
+  padding: 11px;
+  min-height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: white;
+  font: inherit;
+}
+.admin-page input[type='file'] {
+  padding: 12px;
+  background: white;
+  border: 1px solid var(--line);
+  width: 100%;
+}
+.admin-workbook .field-pair label,
+.admin-mapping-grid label {
+  display: grid;
+  gap: 8px;
+}
+.admin-workbook h2 {
+  overflow-wrap: anywhere;
+}
+.admin-mapping-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.admin-mapping-grid select {
+  width: 100%;
+  min-width: 0;
+}
+.admin-mapping-grid .small-note {
+  font-size: 12px !important;
+}
+.admin-workbook .section-heading {
+  margin-top: 24px;
+}
+.admin-table-scroll {
+  max-width: 100%;
+  overflow: auto;
+  margin: 18px 0 24px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  max-height: 460px;
+}
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 1.55;
+  text-align: left;
+}
+.admin-table th,
+.admin-table td {
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 11px 13px;
+  min-width: 110px;
+  max-width: 340px;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.admin-table thead th {
+  position: sticky;
+  top: 0;
+  background: #f0e8ed;
+  z-index: 1;
+}
+.admin-header-row,
+.admin-field-changed {
+  background: #faf2e8;
+}
+.admin-confirm {
+  margin: 22px 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  background: var(--soft);
+  align-items: flex-start;
+}
+.admin-confirm input {
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+.admin-warning,
+.admin-warnings {
+  padding: 20px;
+  background: #fff8ed;
+  border: 1px solid #ead4b8;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+.admin-warnings {
+  padding-left: 40px;
+}
+.admin-error-panel {
+  padding: 20px;
+  background: #fff1f3;
+  border: 1px solid #e4bcc6;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+.admin-review,
+.admin-history {
+  border-top: 1px solid var(--line);
+  padding-top: 32px;
+  margin-top: 32px;
+}
+.admin-review .account-stats > div {
+  display: grid;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+}
+.admin-review .account-stats strong {
+  font: 34px var(--serif);
+}
+.admin-review .account-stats span {
+  color: var(--muted);
+}
+.admin-change-list summary {
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.admin-change-list .account-panel {
+  margin: 18px 0;
+}
+.admin-change-list .status-pill {
+  margin-right: 8px;
+}
+.admin-history .button {
+  min-width: 0;
+}
+@media (max-width: 900px) {
+  .admin-mapping-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .admin-mapping-grid {
+    grid-template-columns: 1fr;
+  }
+  .admin-nav,
+  .admin-pagination {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .admin-table th,
+  .admin-table td {
+    padding: 9px;
+    min-width: 100px;
+  }
+}
